@@ -1,0 +1,899 @@
+body{
+    background-color: #171717;
+    font-family: 'Manrope', sans-serif;
+    color:#FFFFFF;
+    margin: 0;
+} 
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+    background-color: #18171799;
+    color: #181717;
+    backdrop-filter: blur(10px);
+    background-size: 1600px;
+
+    
+    padding: 0 125px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+/* ── Active nav link ── */
+.nav-active {
+    position: relative;
+    color: #fff !important;
+}
+
+
+.nav-active::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #FA5528;
+    border-radius: 50%;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 125px;
+}
+
+.nav-right{
+    margin-right: 250px;
+}
+
+.navBar_link{
+    margin-left: 125px;
+    display:inline-block;
+    width: auto;
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  width: 120px;
+}
+
+
+/* SLIDER */
+
+#slider {
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  left: 125px;
+  top: 35%;
+  transform: translateY(-50%);
+  max-width: 500px;
+}
+
+.slide-content h1 {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.slide-content h1 span {
+  font-weight: 800;
+}
+
+.btn {
+  margin: 20px 0;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ff3c00;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow {
+  position: static;
+  z-index: 10;
+  bottom: 40px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+}
+
+.arrow.left { left: 45%; }
+.arrow.right { right: 45%; }
+
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #777;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot.active {
+  background: #ff3c00;
+}
+
+
+/* 1. THE CARD (Updated for 200px height) */
+.slider-card {
+    position: absolute;
+    top: 55%;
+    left: 125px;
+    bottom: 100px; /* Adjust based on your title position */
+    width: 500px;
+    height: 200px; /* new height */
+    background-color: rgba(35, 36, 41, 0.6); 
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px; /* Reduced vertical padding */
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 5px;
+}
+
+/* 2. THE TOP ROW (Date, Seasons, Rating) */
+.top-row {
+    display: flex;
+    flex: 0 0 auto;
+    padding-top: 5px;
+    margin-bottom: 8px
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.column span {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-bottom: 2px;
+}
+
+/* 3. THE MIDDLE ROW (Description) */
+.middle-row {
+    display: flex;
+    align-items: flex-start; /* Keeps text at the top of its area */
+    padding: 0; /* Removed extra padding to save space */
+    flex: 0 0 auto;          /* Prevents the middle from expanding too much */
+    padding-bottom: 10px;
+}
+
+.middle-row p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* 4. THE BOTTOM ROW (Button) */
+.bottom-row {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: flex-start; /* Pulls the button upward */
+    padding-top: 8px;          /* Removes any top gap */
+    margin-top: -5px;
+}
+
+.watch-btn {
+    background: linear-gradient(90deg, #FA5528 0%, #D02500 100%);
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.watch-btn:hover {
+    transform: scale(1.05);
+}
+
+@font-face {
+  font-family: "TWD_font";
+  src: url("../fonts/tungsten-black.ttf") format("truetype");
+}
+
+#TWD_title{
+  font-family: "TWD_font", sans-serif; 
+  font-size: 90px; /* Adjust as needed */
+  color: #FFFFFF; /* The main color of the letters */
+  letter-spacing: 3px;
+  line-height: 0.9;
+}
+
+/* SLIDE ANIMATION*/
+/* Base state: Hidden and off-screen to the right by default */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0; /* Hide inactive slides */
+    transform: translateX(100%);
+    transition: transform 0.9s ease-in-out, opacity 0.9s;
+    z-index: 1;
+}
+
+/* The slide currently in view */
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+/* Outgoing animations */
+.slide.exit-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide.exit-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Incoming states (Preparation) */
+.slide.enter-right {
+    transform: translateX(100%);
+    opacity: 1;
+}
+
+.slide.enter-left {
+    transform: translateX(-100%);
+    opacity: 1;
+}
+
+
+
+
+/* IMAGE AREA */
+.slides-wrapper {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.slider-controls {
+    height: 80px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.slide-content { top: 30%; }
+.slider-card { top: 48%; }
+
+/* ========== SHARED SECTION STYLES ========== */
+.section-block {
+    padding: 50px 125px 40px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    color: #fff;
+}
+
+.star-icon {
+    color: #FA5528;
+    margin-right: 8px;
+}
+
+.highlight {
+    color: #FA5528;
+}
+
+/* ========== CATALOG FILTERS ========== */
+.catalog-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.filter-input input,
+.filter-select select {
+    background: #232428;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.filter-input input {
+    width: 160px;
+}
+
+.filter-select {
+    position: relative;
+}
+
+.filter-select::after {
+    content: '▾';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    font-size: 11px;
+}
+
+.filter-select select {
+    padding-right: 30px;
+    min-width: 110px;
+}
+
+.filter-search-btn {
+    background: #FA5528;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.filter-search-btn:hover {
+    background: #d02500;
+}
+
+/* ========== CATALOG GRID ========== */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+/* ========== MOVIE CARD ========== */
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #232428;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder when image not yet added */
+.movie-card img[src$=".jpg"]:not([src^="http"]) {
+    background: #2a2a2a;
+    min-height: 200px;
+}
+
+/* ========== MOVIE CARD 2 ========== */
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+}
+
+/* Image with gradient fade at bottom */
+.card-img-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+}
+
+.card-img-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent 0%, #111 100%);
+    pointer-events: none;
+}
+
+.card-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: rgba(0,0,0,0.4);
+    border: 1.5px solid rgba(255,255,255,0.5);
+    color: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.card-fav:hover { color: #FA5528; border-color: #FA5528; }
+
+/* Bottom info: title, year, stars, rating */
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 8px 12px 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card-year {
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 12px 10px;
+}
+
+.card-stars {
+    font-size: 12px;
+    color: #FA5528;
+    letter-spacing: 1px;
+}
+
+.card-rating {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ========== PAGINATION ========== */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.page-btn {
+    background: #232428;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.page-btn.active,
+.page-btn:hover {
+    background: #FA5528;
+}
+
+.page-dots {
+    color: #888;
+    font-size: 16px;
+}
+
+/* ========== BANNER SLIDER (Best Movies / Best TV Shows) ========== */
+.banner-slider-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.banner-slides {
+    position: relative;
+    height: 360px;
+}
+
+.banner-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out, opacity 0.8s;
+    display: flex;
+    align-items: center;
+}
+
+.banner-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.banner-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.banner-slide.exit-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 60px;
+    max-width: 420px;
+}
+
+.banner-content.right-align {
+    margin-left: auto;
+    text-align: right;
+    padding: 0 60px 0 0;
+}
+
+.banner-content h2 {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 16px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner-content h2 span {
+    display: block;
+}
+
+.banner-content p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 20px 0;
+}
+
+.banner-controls {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 14px 0;
+}
+
+.banner-arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.banner-arrow:hover { opacity: 1; }
+
+.banner-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.banner-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.banner-dot.active { background: #FA5528; }
+
+/* ========== ROW SLIDERS (TV Shows, Movies, Animated) ========== */
+.row-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row-slider {
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+.row-slider .movie-card {
+    width: calc(20% - 13px);
+    min-width: 160px;
+    max-width: 220px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.row-arrow {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.row-arrow:hover {
+    background: #FA5528;
+    border-color: #FA5528;
+}
+
+/* ========== MEMBERSHIP BANNER ========== */
+.membership-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #1a0a00 0%, #0d0d0d 50%, #1a0a00 100%);
+    overflow: hidden;
+    position: relative;
+    min-height: 240px;
+    margin-top: 20px;
+}
+
+.membership-left-img,
+.membership-right-img {
+    width: 28%;
+    overflow: hidden;
+    position: relative;
+}
+
+.membership-left-img img,
+.membership-right-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.7;
+}
+
+.membership-left-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent, #0d0d0d);
+}
+
+.membership-right-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, transparent, #0d0d0d);
+    z-index: 1;
+}
+
+.membership-center {
+    text-align: center;
+    padding: 0 40px;
+    flex: 1;
+    z-index: 2;
+}
+
+.membership-center h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+}
+
+.membership-center p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 320px;
+    margin: 0 auto 20px;
+}
+
+.details-btn {
+    background: linear-gradient(90deg, #FA5528 0%, #D02500 100%);
+    border: none;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.details-btn:hover { transform: scale(1.05); }
+
+/* ========== FOOTER ========== */
+.site-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 125px;
+    background: #111;
+    border-top: 1px solid #222;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-logo span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FA5528;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover { color: #FA5528; }
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-social span {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.social-icons a:hover { background: #FA5528; }
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+}
+
+.footer-active{
+    color: #FA5528;
+}
+
+

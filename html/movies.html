@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/figma3.css">
+    <link rel="stylesheet" href="../css/movies.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSpecter — Movies</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navBar">
+        <div class="nav-left">
+            <img class="navBar_link" src="../images/nav_bar/010.png" alt="MovieSpecter">
+            <a href="../index.html" class="navBar_link">Home</a>
+            <a href="movies.html" class="navBar_link nav-active">Movies</a>
+            <a href="TVshows.html" class="navBar_link">TV Shows</a>
+            <a href="membership.html" class="navBar_link">Membership</a>
+            <a href="profile.html" class="navBar_link">Profile</a>
+        </div>
+        <div class="nav-right">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <img class="icon" src="../images/nav_bar/012.png">
+            </div>
+            <img class="icon" src="../images/nav_bar/009.png">
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="movies-main">
+
+        <!-- FILTER BAR -->
+        <div class="movies-filter-bar">
+            <div class="movies-search-wrap">
+                <input type="text" placeholder="Search" class="movies-search-input">
+            </div>
+            <div class="movies-filters">
+                <div class="filter-select">
+                    <select><option>Year</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Category</option><option>Movie</option><option>TV Show</option><option>Animated</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Genre</option><option>Action</option><option>Drama</option><option>Horror</option><option>Comedy</option><option>Sci-Fi</option><option>Thriller</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Country</option><option>USA</option><option>UK</option><option>France</option><option>South Korea</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>IMDB Rate</option><option>9+</option><option>8+</option><option>7+</option><option>6+</option></select>
+                </div>
+                <button class="filter-search-btn">&#128269;</button>
+            </div>
+        </div>
+
+        <!-- MOVIES GRID -->
+        <div class="movies-grid" id="moviesGrid">
+
+            <!-- Row 1 -->
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/028.jpg" alt="Inception"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Inception</span><span class="card-year">2010</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.8</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/029.jpg" alt="Titanic"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Titanic</span><span class="card-year">1997</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.9</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/030.jpg" alt="The Dark Knight Rises"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Dark Knight Rises</span><span class="card-year">2012</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.4</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/031.jpg" alt="Avengers: Endgame"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Avengers: Endgame</span><span class="card-year">2019</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.4</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/032.jpg" alt="The Wolf of Wall Street"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Wolf of Wall Street</span><span class="card-year">2013</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.2</span></div>
+            </div>
+
+            <!--Row 2-->
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/033.jpg" alt="Harry Potter"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Harry Potter</span><span class="card-year">2001</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.6</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/019.jpg" alt="The Hunger Games"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Hunger Games</span><span class="card-year">2012</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.2</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/034.jpg" alt="Spider-Man: No Way Home"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Spider-Man: No Way Home</span><span class="card-year">2021</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.2</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/009.jpg" alt="Avatar"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Avatar</span><span class="card-year">2009</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.9</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/035.jpg" alt="Joker"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Joker</span><span class="card-year">2019</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.4</span></div>
+            </div>
+
+            <!-- Row 3: featured row wrapper -->
+            <div class="featured-row">
+                <!-- Featured card: 3 cols wide,  480px tall -->
+                <div class="movie-card featured-card">
+                    <div class="featured-img-wrap">
+                        <img src="../images/catalog/036.png" alt="Avatar: The Way of Water">
+                        <div class="featured-overlay">
+                            <button class="play-btn">&#9654;</button>
+                            <div class="featured-info">
+                                <h3>Avatar: The Way of Water</h3>
+                                <p>Jake Sully And Ney'tari Have Formed A Family And Are Doing Everything To Stay Together. However, They Must Leave Their Home And Explore The Regions Of Pandora.</p>
+                                <div class="featured-meta">
+                                    <span class="card-stars">★★★★★</span>
+                                    <span class="featured-genre">Action/Sci-Fi</span>
+                                    <span class="featured-year">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side cards: 2×2 grid, same total height as featured -->
+                <div class="side-cards">
+                    <div class="movie-card">
+                        <div class="card-img-wrap"><img src="../images/catalog/037.jpg" alt="The Matrix"><button class="card-fav">♡</button></div>
+                        <div class="card-info"><span>The Matrix</span><span class="card-year">1999</span></div>
+                        <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.7</span></div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-img-wrap"><img src="../images/catalog/038.jpg" alt="Shutter Island"><button class="card-fav">♡</button></div>
+                        <div class="card-info"><span>Shutter Island</span><span class="card-year">2010</span></div>
+                        <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.2</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/039.png" alt="Gladiator"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Gladiator</span><span class="card-year">2000</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.5</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/040.jpg" alt="Doctor Strange"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Doctor Strange</span><span class="card-year">2016</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.5</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/041.jpeg" alt="Black Panther"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Black Panther</span><span class="card-year">2018</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.3</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/042.jpeg" alt="The Curse of the Black Pearl"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Curse of the Black Pearl</span><span class="card-year">2003</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.1</span></div>
+            </div>
+
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="../images/catalog/043.jpg" alt="Twilight"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Twilight</span><span class="card-year">2011</span></div>
+                <div class="card-bottom"><span class="card-stars">★★☆☆☆</span><span class="card-rating">4.9</span></div>
+            </div>
+
+        </div><!-- end movies-grid -->
+
+        <!-- LOAD MORE -->
+        <div class="load-more-wrap">
+            <button class="load-more-btn">Load More</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="../images/nav_bar/010.png" alt="MovieSpecter Logo">
+            <span>MovieSpecter</span>
+        </div>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="movies.html" style="color:#FA5528">Movies</a>
+            <a href="TVshows.html">TV Shows</a>
+            <a href="membership.html">Membership</a>
+            <a href="profile.html">Profile</a>
+        </div>
+        <div class="footer-social">
+            <span>Social Network</span>
+            <div class="social-icons">
+                <a href="#">f</a>
+                <a href="#">&#9741;</a>
+                <a href="#">&#10000;</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <span>email: moviespecter@gmail.com</span>
+            <span>© 2025 MovieSpecter.<br>All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="../js/movies.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

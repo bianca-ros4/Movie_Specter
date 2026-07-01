@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/figma3.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSpecter — Profile</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="nav-left">
+            <img class="navBar_link" src="../images/nav_bar/010.png" alt="MovieSpecter">
+            <a href="../index.html" class="navBar_link">Home</a>
+            <a href="movies.html" class="navBar_link">Movies</a>
+            <a href="tvshows.html" class="navBar_link">TV Shows</a>
+            <a href="membership.html" class="navBar_link">Membership</a>
+            <a href="profile.html" class="navBar_link nav-active">Profile</a>
+        </div>
+        <div class="nav-right">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <img class="icon" src="../images/nav_bar/012.png">
+            </div>
+            <img class="icon" src="../images/nav_bar/009.png">
+        </div>
+    </nav>
+
+    <div class="profile-banner">
+        <img src="../images/profile/001.png" alt="Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <div class="profile-info">
+        <img src="../images/profile/002.png" alt="Avatar" class="profile-avatar">
+        <span class="profile-name">Full Name</span>
+    </div>
+
+    <main class="profile-main">
+
+        <div class="category-bar">
+            <h2 class="category-title" id="categoryTitle">Watched</h2>
+            <div class="category-others" id="categoryOthers">
+                <button class="cat-btn" data-cat="favorites">Favorites</button>
+                <button class="cat-btn" data-cat="watchlist">Watch List</button>
+            </div>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div class="profile-filter-bar">
+            <div class="profile-search-wrap">
+                <input type="text" placeholder="Search" class="profile-search-input">
+            </div>
+            <div class="profile-filters">
+                <div class="filter-select">
+                    <select><option>Year</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Category</option><option>Movie</option><option>TV Show</option><option>Animated</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Genre</option><option>Action</option><option>Drama</option><option>Horror</option><option>Comedy</option><option>Sci-Fi</option><option>Thriller</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>Country</option><option>USA</option><option>UK</option><option>France</option><option>South Korea</option></select>
+                </div>
+                <div class="filter-select">
+                    <select><option>IMDB Rate</option><option>9+</option><option>8+</option><option>7+</option><option>6+</option></select>
+                </div>
+                <button class="filter-search-btn">&#128269;</button>
+            </div>
+        </div>
+
+        <div class="profile-grid" id="profileGrid"></div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="../images/nav_bar/010.png" alt="MovieSpecter Logo">
+            <span>MovieSpecter</span>
+        </div>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="tvshows.html">TV Shows</a>
+            <a href="membership.html">Membership</a>
+            <a href="profile.html" style="color:#FA5528">Profile</a>
+        </div>
+        <div class="footer-social">
+            <span>Social Network</span>
+            <div class="social-icons">
+                <a href="#">f</a>
+                <a href="#">&#9741;</a>
+                <a href="#">&#10000;</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <span>email: moviespecter@gmail.com</span>
+            <span>© 2025 MovieSpecter.<br>All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>

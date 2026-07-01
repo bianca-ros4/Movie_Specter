@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/figma3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSpecter</title>
+</head>
+<body>
+    <header>
+        <!-- NAVIGATOR -->
+        <nav class="navBar">
+            <div class="nav-left">
+                <img class="navBar_link" src="images/nav_bar/010.png" alt="MovieSpecter">
+                <a href="index.html" class="navBar_link nav-active">Home</a>
+                <a href="html/movies.html" class="navBar_link">Movies</a>
+                <a href="html/TVshows.html" class="navBar_link">TV Shows</a>
+                <a href="html/membership.html" class="navBar_link">Membership</a>
+                <a href="html/profile.html" class="navBar_link">Profile</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="search">
+                <input type="text" placeholder="Search">
+                <img class="icon" src="images/nav_bar/012.png">
+                </div>
+                <img class="icon" src="images/nav_bar/009.png">
+            </div>
+        </nav>
+
+        <!-- HOMEPAGE SLIDER -->
+        <section id="slider">
+            <!--slide 1-->
+            <div class="slides-wrapper">
+            <div class="slide active">
+                <img src="images/slide_show/011.jpg" class="slide-img">
+                
+                <div class="slide-content">
+                    <h1 id="TWD_title">THE WALKING<br><span>DEAD</span></h1>
+                </div>
+
+                <div class="slider-card">
+                    <div class="top-row">
+                        <div class="column">
+                            <span>Release Date</span>
+                            <strong>31 Oct 2010</strong>
+                        </div>
+                        <div class="column">
+                            <span>Seasons</span>
+                            <strong>11</strong>
+                        </div>
+                        <div class="column">
+                            <span>Rating</span>
+                            <strong>8.2</strong>
+                        </div>
+                    </div>
+
+                    <div class="middle-row">
+                        <p>Sheriff Deputy Rick Grimes wakes up from a coma to learn the world 
+                            is in ruins and must lead a group of survivors to stay alive.
+                            In the wake of a zombie apocalypse, various survivors struggle to stay alive. 
+                        </p>
+                    </div>
+
+                    <div class="bottom-row">
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--slide 2-->
+            <div class="slide">
+                <img src="images/slide_show/010.jpg" class="slide-img">
+                <div class="slide-content">
+                    <h1 style="font-family: sans-serif; font-weight: 800;">BREAKING<br><span>BAD</span></h1>
+                </div>
+                <div class="slider-card">
+                    <div class="top-row">
+                        <div class="column"><span>Release Date</span><strong>20 Jan 2008</strong></div>
+                        <div class="column"><span>Seasons</span><strong>5</strong></div>
+                        <div class="column"><span>Rating</span><strong>9.5</strong></div>
+                    </div>
+                    <div class="middle-row"><p>Walter White, a chemistry teacher, discovers that 
+                        he has cancer and decides to get into the meth-making business to repay his 
+                        medical debts. His priorities begin to change when he partners with Jesse.</p></div>
+                    <div class="bottom-row"><button class="watch-btn">Watch Now</button></div>
+                </div>
+            </div>
+
+            <!--slide 3-->
+            <div class="slide">
+                <img src="images/slide_show/009.jpg" class="slide-img">
+                <div class="slide-content">
+                    <h1 style="font-family: serif; letter-spacing: 4px;">STRANGER<br><span>THINGS</span></h1>
+                </div>
+                <div class="slider-card">
+                    <div class="top-row">
+                        <div class="column"><span>Release Date</span><strong>15 Jul 2016</strong></div>
+                        <div class="column"><span>Seasons</span><strong>4</strong></div>
+                        <div class="column"><span>Rating</span><strong>8.7</strong></div>
+                    </div>
+                    <div class="middle-row"><p>In the 1980s Indiana, a group of young friends witness 
+                        supernatural forces and secret government exploits. As they search for answers, 
+                        the children unravel a series of extraordinary mysteries.</p></div>
+                    <div class="bottom-row"><button class="watch-btn">Watch Now</button></div>
+                </div>
+            </div>
+            
+
+            <!--slide 4-->
+            <div class="slide">
+                <img src="images/slide_show/013.jpg" class="slide-img">
+                <div class="slide-content">
+                    <h1 style="font-family: serif; letter-spacing: 4px;" id="brigt_text">BRIDGERTON</h1>
+                </div>
+                <div class="slider-card">
+                    <div class="top-row">
+                        <div class="column"><span>Release Date</span><strong>25 Dec 2020</strong></div>
+                        <div class="column"><span>Seasons</span><strong>4</strong></div>
+                        <div class="column"><span>Rating</span><strong>7.4</strong></div>
+                    </div>
+                    <div class="middle-row"><p>During the Regency era in England, eight 
+                        close-knit siblings of the powerful Bridgerton family attempt to find love, 
+                        following Daphne Bridgerton, the eldest daughter of the powerful Bridgerton family</p></div>
+                    <div class="bottom-row"><button class="watch-btn">Watch Now</button></div>
+                </div>
+            </div>
+        </div>
+            <div class="slider-controls">
+                <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+
+                <div class="dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        
+
+
+    
+    </header>
+
+    <!-- CATALOG SECTION -->
+    <section class="section-block" id="catalog">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> Catalog</h2>
+        </div>
+        <div class="catalog-filters">
+            <div class="filter-input">
+                <input type="text" placeholder="Name Film">
+            </div>
+            <div class="filter-select">
+                <select><option>2020</option><option>2023</option><option>2022</option><option>2021</option><option>2019</option></select>
+            </div>
+            <div class="filter-select">
+                <select><option>Category</option><option>Movie</option><option>TV Show</option><option>Animated</option></select>
+            </div>
+            <div class="filter-select">
+                <select><option>Genre</option><option>Action</option><option>Drama</option><option>Horror</option><option>Comedy</option></select>
+            </div>
+            <div class="filter-select">
+                <select><option>Country</option><option>USA</option><option>UK</option><option>France</option></select>
+            </div>
+            <button class="filter-search-btn">&#128269;</button>
+        </div>
+ 
+        <div class="catalog-grid">
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/001.jpg" alt="Mayfair Witches"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Mayfair Witches</span><span class="card-year">2023</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.8</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><a href="html/preview.html"></a> <img src="images/catalog/002.jpg" alt="Mission Impossible"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Mission Impossible</span><span class="card-year">2023</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.5</span></div>
+            </div>
+            <div class="movie-card" onclick="openPreview()">
+                <div class="card-img-wrap"><img src="images/catalog/003.jpg" alt="Supernatural"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Supernatural</span><span class="card-year">2005</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.4</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/004.jpg" alt="Black Widow"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Black Widow</span><span class="card-year">2021</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.3</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/006.jpg" alt="The 100"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The 100</span><span class="card-year">2014</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.6</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/007.jpg" alt="Grey's Anatomy"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Grey's Anatomy</span><span class="card-year">2005</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.6</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/005.jpg" alt="The Equalizer 2"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Equalizer 2</span><span class="card-year">2018</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">7.1</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/008.jpg" alt="The Queen's Gambit"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Queen's Gambit</span><span class="card-year">2020</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.6</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/010.png" alt="The Witcher"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Witcher</span><span class="card-year">2019</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.2</span></div>
+            </div>
+            <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/009.jpg" alt="Avatar"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Avatar</span><span class="card-year">2009</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.9</span></div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-btn">17</button>
+        </div>
+    </section>
+
+    <!-- BEST MOVIES BANNER -->
+    <section class="section-block" id="best-movies">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> Our <span class="highlight">Best Movies</span></h2>
+        </div>
+        <div class="banner-slider-wrapper">
+            <div class="banner-slides">
+                <div class="banner-slide active" style="background-image: url('images/banner_slide/001.jpg')">
+                    <div class="banner-content">
+                        <h2>I AM<br><span>LEGEND</span></h2>
+                        <p>Lorem Ipsum Dolor Sit Amet Consectetur. Id Proin Velit Vitae Tempus Etiam Malesuada. Aliquam Adipiscing Venenatis At Orci Inteque. Blandit Velit Blandit Semper Sed Sapie.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide" style="background-image: url('images/banner_slide/005.jpg')">
+                    <div class="banner-content">
+                        <h2>INCEPTION</h2>
+                        <p>When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide" style="background-image: url('images/banner_slide/002.jpeg')">
+                    <div class="banner-content">
+                        <h2>TOP<br><span>GUN</span></h2>
+                        <p>After more than thirty years of service as one of the Navy's top aviators, Maverick is where he belongs, pushing the envelope as a courageous test pilot.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide" style="background-image: url('images/banner_slide/006.jpg')">
+                    <div class="banner-content">
+                        <h2>OPPENHEIMER</h2>
+                        <p>The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-controls">
+                <button class="banner-arrow left" onclick="changeBanner(-1)">&#10094;</button>
+                <div class="banner-dots">
+                    <span class="banner-dot active" onclick="currentBanner(0)"></span>
+                    <span class="banner-dot" onclick="currentBanner(1)"></span>
+                    <span class="banner-dot" onclick="currentBanner(2)"></span>
+                    <span class="banner-dot" onclick="currentBanner(3)"></span>
+                </div>
+                <button class="banner-arrow right" onclick="changeBanner(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TV SHOWS ROW -->
+    <section class="section-block" id="tvShows">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> TV Shows</h2>
+        </div>
+        <div class="row-slider-container">
+            <button class="row-arrow left" onclick="scrollRow('tvShowsRow', -1)">&#10094;</button>
+            <div class="row-slider" id="tvShowsRow">
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/013.png" alt="Legacies"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Legacies</span><span class="card-year">2018</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.2</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/011.png" alt="Loki"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Loki</span><span class="card-year">2021</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.2</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/012.png" alt="The Boys"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Boys</span><span class="card-year">2019</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">8.7</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/014.png" alt="The Last of Us"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Last of Us</span><span class="card-year">2022</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">9.0</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/016.jpg" alt="The Vampire Dieries"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Vampire Dieries</span><span class="card-year">2009</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.7</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/015.jpg" alt="Anne"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Anne</span><span class="card-year">2016</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">7.8</span></div>
+            </div>
+            </div>
+            <button class="row-arrow right" onclick="scrollRow('tvShowsRow', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- MOVIES ROW -->
+    <section class="section-block" id="movies">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> Movies</h2>
+        </div>
+        <div class="row-slider-container">
+            <button class="row-arrow left" onclick="scrollRow('moviesRow', -1)">&#10094;</button>
+            <div class="row-slider" id="moviesRow">
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/017.jpg" alt="ONly ypu"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Only You</span><span class="card-year">1994</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">6.5</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/020.jpg" alt="deja vu"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Deja Vu</span><span class="card-year">2006</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">7.1</span></div>
+            </div>
+                
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/019.jpg" alt="The Hunger Games"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Hunger Games</span><span class="card-year">2023</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.2</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/021.jpg" alt="Bad Boys II"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Bad Boys II</span><span class="card-year">2003</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">6.6</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/018.jpg" alt="Law Abiding Citizen"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Law Abiding Citizen</span><span class="card-year">2009</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.4</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/009.jpg" alt="Avatar"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Avatar</span><span class="card-year">2009</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.9</span></div>
+            </div>
+            </div>
+            <button class="row-arrow right" onclick="scrollRow('moviesRow', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- BEST TV SHOWS BANNER -->
+    <section class="section-block" id="best-tvshows">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> Our <span class="highlight">Best TV Shows</span></h2>
+        </div>
+        <div class="banner-slider-wrapper" id="bestTvWrapper">
+            <div class="banner-slides" id="bestTvSlides">
+                <div class="banner-slide active" style="background-image: url('images/banner_slide/010.jpg')">
+                    <div class="banner-content right-align">
+                        <h2>WEDNESDAY</h2>
+                        <p>While attending Nevermore Academy, Wednesday Addams attempts to master her emerging psychic ability, thwart a killing spree and solve the mystery that embroiled her parents 25 years ago.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide" style="background-image: url('images/banner_slide/011.jpg')">
+                    <div class="banner-content right-align">
+                        <h2>THE ROKIE</h2>
+                        <p>Forty-year-old John Nolan moves to Los Angeles in the hope of becoming a police officer. However, he is met with scepticism from all corners and must battle many challenges along the way.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide" style="background-image: url('images/banner_slide/008.png')">
+                    <div class="banner-content right-align">
+                        <h2>THE LAST<br><span>OF US</span></h2>
+                        <p>After a global catastrophe, a hardened survivor takes charge of a 14-year-old girl who may be humanity's last hope.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-controls" id="bestTvControls">
+                <button class="banner-arrow left" onclick="changeBestTv(-1)">&#10094;</button>
+                <div class="banner-dots" id="bestTvDots">
+                    <span class="banner-dot active" onclick="currentBestTv(0)"></span>
+                    <span class="banner-dot" onclick="currentBestTv(1)"></span>
+                    <span class="banner-dot" onclick="currentBestTv(2)"></span>
+                </div>
+                <button class="banner-arrow right" onclick="changeBestTv(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMATED MOVIES ROW -->
+    <section class="section-block" id="animated">
+        <div class="section-header">
+            <h2><span class="star-icon">★</span> Animated Movies</h2>
+        </div>
+        <div class="row-slider-container">
+            <button class="row-arrow left" onclick="scrollRow('animatedRow', -1)">&#10094;</button>
+            <div class="row-slider" id="animatedRow">
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/026.jpg" alt="Luck"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Luck</span><span class="card-year">2022</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">5.9</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/025.jpg" alt="Wall-E"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Wall-E</span><span class="card-year">2008</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.4</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/027.jpg" alt="How to Train Your Dragon"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>How to Train Your Dragon</span><span class="card-year">2010</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">7.9</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/022.jpg" alt="Hoppers"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Hoppers</span><span class="card-year">2022</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★☆☆</span><span class="card-rating">6.1</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/024.jpeg" alt="The Lion King"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>The Lion King</span><span class="card-year">1994</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★★</span><span class="card-rating">8.5</span></div>
+            </div>
+                <div class="movie-card">
+                <div class="card-img-wrap"><img src="images/catalog/023.jpeg" alt="Moana"><button class="card-fav">♡</button></div>
+                <div class="card-info"><span>Moana</span><span class="card-year">2016</span></div>
+                <div class="card-bottom"><span class="card-stars">★★★★☆</span><span class="card-rating">7.6</span></div>
+            </div>
+            </div>
+            <button class="row-arrow right" onclick="scrollRow('animatedRow', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP BANNER -->
+    <section class="membership-banner" id="membership">
+        <div class="membership-left-img">
+            <img src="images/membership/001.png" alt="Black Widow">
+        </div>
+        <div class="membership-center">
+            <h2>Our Memberships</h2>
+            <p>Lorem Ipsum Dolor Sit Amet Consectetur. Sed Aliquet Purus Nas Orci Arcu At Orci Purus Vol. Fermentum Tincidunt.</p>
+            <button class="details-btn">Details</button>
+        </div>
+        <div class="membership-right-img">
+            <img src="images/membership/003.png" alt="Venom">
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="images/nav_bar/010.png" alt="MovieSpecter Logo">
+            <span>MovieSpecter</span>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html"  style="color:#FA5528">Home</a>
+            <a href="html/movies.html">Movies</a>
+            <a href="html/TVshows.html">TV Shows</a>
+            <a href="html/membership.html">Membership</a>
+            <a href="html/profile.html">Profile</a>
+        </div>
+        <div class="footer-social">
+            <span>Social Network</span>
+            <div class="social-icons">
+                <a href="#">f</a>
+                <a href="#">&#9741;</a>
+                <a href="#">&#10000;</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <span>email: moviespecter@gmail.com</span>
+            <span>© 2015 MovieSpecter.<br>All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
